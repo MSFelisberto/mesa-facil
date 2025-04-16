@@ -11,7 +11,7 @@ Desenvolver um backend robusto utilizando Spring Boot para gerenciar usuários, 
 ## 2. Arquitetura do Sistema
 
 ### Descrição da Arquitetura
-O projeto FaseFood segue uma arquitetura em camadas, aplicando o padrão MVC adaptado para APIs REST:
+O projeto Mesa Facil segue uma arquitetura em camadas, aplicando o padrão MVC adaptado para APIs REST:
 
 - **Controller Layer**: Responsável por receber as requisições HTTP, validar os inputs e direcionar para os serviços apropriados.
 - **Service Layer**: Contém a lógica de negócio, orquestrando as operações e interagindo com os repositórios.
@@ -137,7 +137,7 @@ services:
       - SPRING_H2_CONSOLE_ENABLED=true
       - MESAFACIL_OPENAPI_DEV_URL=http://localhost:8080
     networks:
-      - fasefood-network
+      - mesafacil-network
     restart: unless-stopped
 
   # Serviço do banco H2
@@ -152,11 +152,11 @@ services:
     volumes:
       - h2-data:/opt/h2-data
     networks:
-      - fasefood-network
+      - mesafacil-network
     restart: unless-stopped
 
 networks:
-  fasefood-network:
+  mesafacil-network:
     driver: bridge
 
 volumes:
@@ -174,7 +174,7 @@ Este arquivo define:
 1. Clone o repositório:
    ```bash
    git clone https://github.com/MSFelisberto/mesa-facil.git
-   cd fasefood
+   cd mesafacil
    ```
 
 2. Execute com Docker Compose:
@@ -225,7 +225,7 @@ A collection do Postman está disponível no repositório, no arquivo `MesaFacil
 1. Abra o Postman
 2. Clique em "Import" no canto superior esquerdo
 3. Arraste o arquivo `MesaFacil.postman_collection.json` ou navegue até ele
-4. Após importar, você verá a collection "FaseFood API" no painel lateral
+4. Após importar, você verá a collection "MesaFacil API" no painel lateral
 5. Expanda a pasta "Usuários" para ver todos os endpoints disponíveis
 
 ### Descrição dos Testes Manuais
@@ -249,10 +249,10 @@ O código completo está disponível em: [https://github.com/MSFelisberto/mesa-f
 ### Estrutura do Repositório
 
 ```
-fasefood/
+mesafacil/
 ├── src/
 │   ├── main/
-│   │   ├── java/br/com/fiap/fasefood/
+│   │   ├── java/br/com/fiap/mesafacil/
 │   │   │   ├── config/            # Configurações da aplicação
 │   │   │   ├── controllers/       # Controladores REST
 │   │   │   ├── dtos/              # Objetos de transferência de dados
@@ -260,12 +260,12 @@ fasefood/
 │   │   │   ├── enums/             # Enumerações
 │   │   │   ├── repositories/      # Repositórios JPA
 │   │   │   ├── services/          # Camada de serviços
-│   │   │   └── FasefoodApplication.java  # Classe principal
+│   │   │   └── mesafacilApplication.java  # Classe principal
 │   │   └── resources/             # Arquivos de configuração
 │   └── test/                      # Testes da aplicação
 ├── Dockerfile                     # Build da imagem Docker
 ├── docker-compose.yml             # Orquestração dos containers
-├── FaseFood.postman_collection.json  # Collection para testes
+├── mesafacil.postman_collection.json  # Collection para testes
 ├── README.md                      # Documentação
 └── pom.xml                        # Configuração Maven
 ```
