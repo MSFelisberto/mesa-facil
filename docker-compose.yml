@@ -1,0 +1,43 @@
+services:
+  # Serviço da API
+  mesafacil-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mesafacil-api
+    ports:
+      - "8080:8080"
+    depends_on:
+      - h2-database
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:h2:tcp://h2-database:1521/mesafacil
+      - SPRING_DATASOURCE_USERNAME=admin
+      - SPRING_DATASOURCE_PASSWORD=admin
+      - SPRING_DATASOURCE_DRIVER_CLASS_NAME=org.h2.Driver
+      - SPRING_H2_CONSOLE_ENABLED=true
+      - MESAFACIL_OPENAPI_DEV_URL=http://localhost:8080
+    networks:
+      - mesafacil-network
+    restart: unless-stopped
+
+  # Serviço do banco H2 (para persistência entre reinicializações)
+  h2-database:
+    image: oscarfonts/h2
+    container_name: h2-database
+    ports:
+      - "8082:8082"  # Interface web do H2
+      - "1521:1521"  # Porta TCP para conexão
+    environment:
+      - H2_OPTIONS=-ifNotExists
+    volumes:
+      - h2-data:/opt/h2-data
+    networks:
+      - mesafacil-network
+    restart: unless-stopped
+
+networks:
+  fasefood-network:
+    driver: bridge
+
+volumes:
+  h2-data:
