@@ -36,7 +36,7 @@ services:
     restart: unless-stopped
 
 networks:
-  fasefood-network:
+  mesafacil-network:
     driver: bridge
 
 volumes:

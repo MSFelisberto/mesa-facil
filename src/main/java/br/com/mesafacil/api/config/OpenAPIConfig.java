@@ -37,9 +37,9 @@ public class OpenAPIConfig {
                 .url("https://opensource.org/licenses/MIT");
 
         Info info = new Info()
-                .title("API de Gerenciamento FaseFood")
+                .title("API de Gerenciamento Mesa Facil")
                 .version("1.0")
-                .description("Esta API fornece endpoints para gerenciamento do sistema FaseFood, para o Tech Challenge PosTech FIAP")
+                .description("Esta API fornece endpoints para gerenciamento do sistema Mesa Facil, para o Tech Challenge PosTech FIAP")
                 .contact(contact)
                 .license(licencaMIT);
 
