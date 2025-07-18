@@ -1,22 +1,19 @@
-# Estágio de build
-FROM maven:3.9.5-eclipse-temurin-21 AS build
+FROM maven:3.9.9-eclipse-temurin-21-alpine AS build
+
 WORKDIR /app
 
-# Copiar arquivos do projeto
-COPY . .
+COPY src /app/src
+COPY pom.xml /app
 
-# Compilar e empacotar o projeto
-RUN mvn clean package -DskipTests
+RUN mvn clean install -DskipTests
 
-# Estágio de execução
 FROM eclipse-temurin:21-jre-alpine
-WORKDIR /app
 
 # Copiar o JAR compilado do estágio de build
-COPY --from=build /app/target/*.jar /app/maesafacil.jar
+COPY --from=build /app/target/mesafacil-0.0.1-SNAPSHOT.jar /app/maesafacil.jar
 
-# Expor a porta da aplicação
+WORKDIR /app
+
 EXPOSE 8080
 
-# Comando para iniciar a aplicação
-ENTRYPOINT ["java", "-jar", "/app/maesafacil.jar"]
+CMD ["sh", "-c", "sleep 15 && java -jar app.jar"]
