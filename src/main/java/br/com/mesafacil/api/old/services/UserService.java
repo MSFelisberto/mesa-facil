@@ -1,9 +1,9 @@
-package br.com.mesafacil.api.services;
+package br.com.mesafacil.api.old.services;
 
-import br.com.mesafacil.api.dtos.*;
-import br.com.mesafacil.api.entities.User;
-import br.com.mesafacil.api.repositories.UserRepository;
-import br.com.mesafacil.api.services.exceptions.ResourceNotFoundException;
+import br.com.mesafacil.api.old.dtos.*;
+import br.com.mesafacil.api.old.entities.User;
+import br.com.mesafacil.api.old.repositories.UserRepository;
+import br.com.mesafacil.api.old.services.exceptions.ResourceNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;

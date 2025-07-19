@@ -1,7 +1,7 @@
-package br.com.mesafacil.api.controllers;
+package br.com.mesafacil.api.old.controllers;
 
-import br.com.mesafacil.api.dtos.*;
-import br.com.mesafacil.api.services.UserService;
+import br.com.mesafacil.api.old.dtos.*;
+import br.com.mesafacil.api.old.services.UserService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.media.Content;

@@ -1,7 +1,7 @@
-package br.com.mesafacil.api.dtos;
+package br.com.mesafacil.api.old.dtos;
 
-import br.com.mesafacil.api.entities.User;
-import br.com.mesafacil.api.enums.ETipoUsuario;
+import br.com.mesafacil.api.old.entities.User;
+import br.com.mesafacil.api.old.enums.ETipoUsuario;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 @Schema(description = "Dados de um usuário para listagem")

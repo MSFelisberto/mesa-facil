@@ -1,6 +1,6 @@
-package br.com.mesafacil.api.repositories;
+package br.com.mesafacil.api.old.repositories;
 
-import br.com.mesafacil.api.entities.User;
+import br.com.mesafacil.api.old.entities.User;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -1,4 +1,4 @@
-package br.com.mesafacil.api.dtos;
+package br.com.mesafacil.api.old.dtos;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 

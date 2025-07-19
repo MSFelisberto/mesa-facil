@@ -1,10 +1,10 @@
-package br.com.mesafacil.api.entities;
+package br.com.mesafacil.api.old.entities;
 
-import br.com.mesafacil.api.dtos.ChangeUserPasswordDTO;
-import br.com.mesafacil.api.dtos.CreateUserDTO;
-import br.com.mesafacil.api.dtos.EnderecoDTO;
-import br.com.mesafacil.api.dtos.UpdateUserDataDTO;
-import br.com.mesafacil.api.enums.ETipoUsuario;
+import br.com.mesafacil.api.old.dtos.ChangeUserPasswordDTO;
+import br.com.mesafacil.api.old.dtos.CreateUserDTO;
+import br.com.mesafacil.api.old.dtos.EnderecoDTO;
+import br.com.mesafacil.api.old.dtos.UpdateUserDataDTO;
+import br.com.mesafacil.api.old.enums.ETipoUsuario;
 import jakarta.persistence.*;
 import lombok.*;
 

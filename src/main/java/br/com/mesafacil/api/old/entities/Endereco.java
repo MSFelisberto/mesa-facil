@@ -1,6 +1,6 @@
-package br.com.mesafacil.api.entities;
+package br.com.mesafacil.api.old.entities;
 
-import br.com.mesafacil.api.dtos.EnderecoDTO;
+import br.com.mesafacil.api.old.dtos.EnderecoDTO;
 import jakarta.persistence.*;
 import lombok.*;
 

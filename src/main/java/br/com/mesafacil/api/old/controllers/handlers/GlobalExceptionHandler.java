@@ -1,6 +1,6 @@
-package br.com.mesafacil.api.controllers.handlers;
+package br.com.mesafacil.api.old.controllers.handlers;
 
-import br.com.mesafacil.api.services.exceptions.ResourceNotFoundException;
+import br.com.mesafacil.api.old.services.exceptions.ResourceNotFoundException;
 import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

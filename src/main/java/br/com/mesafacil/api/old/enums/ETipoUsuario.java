@@ -1,4 +1,4 @@
-package br.com.mesafacil.api.enums;
+package br.com.mesafacil.api.old.enums;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 

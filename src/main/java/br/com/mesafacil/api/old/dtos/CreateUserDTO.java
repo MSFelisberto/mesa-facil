@@ -1,7 +1,7 @@
-package br.com.mesafacil.api.dtos;
+package br.com.mesafacil.api.old.dtos;
 
 
-import br.com.mesafacil.api.enums.ETipoUsuario;
+import br.com.mesafacil.api.old.enums.ETipoUsuario;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;

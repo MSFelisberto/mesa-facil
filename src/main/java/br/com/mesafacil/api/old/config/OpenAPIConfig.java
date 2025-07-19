@@ -1,4 +1,4 @@
-package br.com.mesafacil.api.config;
+package br.com.mesafacil.api.old.config;
 
 import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.OpenAPI;
